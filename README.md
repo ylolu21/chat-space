@@ -33,6 +33,7 @@ Things you may want to cover:
 ### Association
 - has_many :groups, through: :group_users
 - has_many :group_users
+- has_many :messages
 
 
 ## groupsテーブル
@@ -43,6 +44,7 @@ Things you may want to cover:
 ### Association
 - has_many :users, through: :groups_users
 - has_many :group_users
+- has_many :messages
 - accepts_nested_attributes_for :group_users
 
 
@@ -62,7 +64,6 @@ Things you may want to cover:
 |------|----|-------|
 |body|text||
 |image|string||
-|body|text||
 |user_id|reference|index: true, foreign_key: true|
 |group_id|reference|index: true, foreign_key: true|
 

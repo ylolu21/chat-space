@@ -1,1 +1,34 @@
-%h1 'テスト'
+%div.notification
+	%div.notice チャットグループが作成されました
+
+%div.chat-sidevar
+	%div.chat-sidevar__user
+		%div.chat-sidevar__user
+			%div.chat-sidevar__user-content
+				%div.chat-sidevar__user-name テスト
+				= link_to '', class: "chat-sidevar__new-group" do
+					%i.fa.fa-pencil-square-o
+				= link_to '', class: "chat-sidevar__edit-user" do
+					%i.fa.fa-cog
+	= render partial: "chat-sidevar__groups"
+	= render partial: "chat-sidevar__groups"
+	= render partial: "chat-sidevar__groups"
+
+%div.chat-contents
+	%div.chat-contents__header
+		%div.chat-contents__header__group
+			%div.chat-contents__header__group-name Sampleグループ
+			%div.chat-contents__header__group-edit-btn Edit
+		%div.chat-contents__header__group-member
+			Member : 
+			%i sample
+
+	%div.chat-contents__body
+		= render partial: "chat-contents__body"
+	%div.chat-contents__footer
+		%form{class: "chat-contents__footer__form", action: "/", method: :post}
+			%div.chat-contents__footer__form__body
+				%input{placeholder: "type a message", class: "new-message", type: "text" }
+					%label.upload-label{for: "upload-icon" }
+						= fa_icon("image")
+			%input{type: "submit", value: "SEND", class: "new-message-send-btn" }

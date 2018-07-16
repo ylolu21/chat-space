@@ -1,32 +1,32 @@
 .notification
-	.notice チャットグループが作成されました
+  .notice チャットグループが作成されました
 
 .chat-sidevar
-	.chat-sidevar__user
-		.chat-sidevar__user
-			.chat-sidevar__user-content
-				.chat-sidevar__user-name テスト
-				= link_to '', class: "chat-sidevar__new-group" do
-					%i.fa.fa-pencil-square-o
-				= link_to '', class: "chat-sidevar__edit-user" do
-					%i.fa.fa-cog
-	= render partial: "chat-sidevar__groups"
+  .chat-sidevar__user
+    .chat-sidevar__user
+      .chat-sidevar__user-content
+        .chat-sidevar__user-name テスト
+        = link_to '', class: "chat-sidevar__new-group" do
+          %i.fa.fa-pencil-square-o
+        = link_to '', class: "chat-sidevar__edit-user" do
+          %i.fa.fa-cog
+  = render partial: "chat-sidevar__groups"
 
 .chat-contents
-	.chat-contents__header
-		.chat-contents__header__group
-			.chat-contents__header__group-name Sample
-			.chat-contents__header__group-edit-btn Edit
-		.chat-contents__header__group-member
-			Member : 
-			%i sample
+  .chat-contents__header
+    .chat-contents__header__group
+      .chat-contents__header__group-name Sample
+      .chat-contents__header__group-edit-btn Edit
+    .chat-contents__header__group-member
+      Member : 
+      %i sample
 
-	.chat-contents__body
-		= render partial: "chat-contents__body"
-	.chat-contents__footer
-		%form{class: "chat-contents__footer__form", action: "/", method: :post}
-			.chat-contents__footer__form__body
-				%input{placeholder: "type a message", class: "new-message", type: "text" }
-					%label.upload-label{for: "upload-icon" }
-						= fa_icon("image")
-			%input{type: "submit", value: "SEND", class: "new-message-send-btn" }
+  .chat-contents__body
+    = render partial: "chat-contents__body"
+  .chat-contents__footer
+    %form{class: "chat-contents__footer__form", action: "/", method: :post}
+      .chat-contents__footer__form__body
+        %input{placeholder: "type a message", class: "new-message", type: "text" }
+          %label.upload-label{for: "upload-icon" }
+            = fa_icon("image")
+      %input{type: "submit", value: "SEND", class: "new-message-send-btn" }

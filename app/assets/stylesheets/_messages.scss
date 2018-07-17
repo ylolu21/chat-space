@@ -8,65 +8,6 @@
   }
 }
 
-.chat-sidevar {
-  float: left;
-  background-color: #2f3e51;
-  width: 300px;
-  height: calc(100vh - 30px);
-  overflow: scroll;
-  .chat-sidevar__user {
-    height: 100px;
-    width: 100%;
-    background-color: #253141;
-    position: relative;
-    .chat-sidevar__user-content {
-      width: 100%;
-      height: 40px;
-      line-height: 40px;
-      margin: auto 0;
-      top: 0;
-        bottom: 0;
-        position: absolute;
-      .chat-sidevar__user-name {
-        color: #FFFFFF;
-        width: 60%;
-        font-weight: bold;
-        font-size: 16px;
-        margin: 0 20px;
-        position: relative;
-        display: inline-block;
-      }
-      .chat-sidevar__new-group {
-        display: inline-block;
-        font-size: 16px;
-        position: relative;
-        .fa {
-          font-size: 16px;
-          color: #FFFFFF;
-        }
-      }
-      .chat-sidevar__edit-user {
-        display: inline-block;
-        font-size: 16px;
-        color: #FFFFFF;
-        position: relative;
-      }
-    }
-  }
-  .chat-sidevar__groups {
-    height: 56px;
-    color: #FFFFFF;
-    padding: 20px;
-    .chat-sidevar__groups__name {
-      font-size: 15px;
-    }
-    .chat-sidevar__groups__latest-message {
-      font-size: 11px;
-      margin-top: 5px;
-    }
-  }
-}
-
 .chat-contents {
   width: calc(100% - 300px);
   float: left;

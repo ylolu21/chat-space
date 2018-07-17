@@ -13,7 +13,7 @@
   float: left;
   &__header {
     height: 100px;
-    border-bottom: 1px solid $chatcontensheaderBorderColor;
+    border-bottom: 1px solid $chatcontentsheaderBorderColor;
     &__group {
       @include clearfix();
       padding-left: 40px;
@@ -22,7 +22,7 @@
         float: left;
         margin-top: 35px;
         font-size: 20px;
-        color: #333333;
+        color: $chatcontentsGroupColor;
 
       }
       &-edit-btn {
@@ -37,7 +37,7 @@
       }
     }
     &__group-member {
-    color: #999999;
+    color: $chatcontentsgrayColor;
     font-size: 12px;
     padding-left: 40px;
     }
@@ -61,7 +61,7 @@
         }
         &__send-time {
           font-size: 12px;
-          color: #999999;
+          color: $chatcontentsgrayColor;
           float: left;
           line-height: 12px;
           margin-left: 10px;
@@ -76,7 +76,7 @@
 
   }
   &__footer {
-    background-color: #AAAAAA;
+    background-color: $chatcontentsfooterColor;
     height: 90px;
     width: 100%;
     &__form {
@@ -105,7 +105,7 @@
       .new-message-send-btn {
         margin: 20px 0;
         background-color: $mainBlueColor;
-        color: #FFFFFF;
+        color: $messageSendBtnColor;
         width: 80px;
         height: 50px;
         border: none;

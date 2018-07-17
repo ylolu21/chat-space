@@ -1,0 +1,60 @@
+@import "./variable";
+
+.chat-sidebar {
+  float: left;
+  background-color: $sidebarBackgroundColor;
+  width: 300px;
+  height: calc(100vh - 30px);
+  overflow: scroll;
+  .chat-sidebar__user {
+    height: 100px;
+    width: 100%;
+    background-color: $sidebarUserBackgroundColor;
+    position: relative;
+    .chat-sidebar__user-content {
+      width: 100%;
+      height: 40px;
+      line-height: 40px;
+      margin: auto 0;
+      top: 0;
+        bottom: 0;
+        position: absolute;
+      .chat-sidebar__user-name {
+        color: $sidebarTextColor;
+        width: 60%;
+        font-weight: bold;
+        font-size: 16px;
+        margin: 0 20px;
+        position: relative;
+        display: inline-block;
+      }
+      .chat-sidebar__new-group {
+        display: inline-block;
+        font-size: 16px;
+        position: relative;
+        .fa {
+          font-size: 16px;
+          color: $sidebarTextColor;
+        }
+      }
+      .chat-sidebar__edit-user {
+        display: inline-block;
+        font-size: 16px;
+        color: $sidebarTextColor;
+        position: relative;
+      }
+    }
+  }
+  .chat-sidebar__groups {
+    height: 56px;
+    color: $sidebarTextColor;
+    padding: 20px;
+    .chat-sidebar__groups__name {
+      font-size: 15px;
+    }
+    .chat-sidebar__groups__latest-message {
+      font-size: 11px;
+      margin-top: 5px;
+    }
+  }
+}

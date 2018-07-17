@@ -11,21 +11,21 @@
 .chat-contents {
   width: calc(100% - 300px);
   float: left;
-  .chat-contents__header{
+  &__header {
     height: 100px;
-    border-bottom: 1px solid #eeeeee;
-    .chat-contents__header__group{
+    border-bottom: 1px solid $chatcontensheaderBorderColor;
+    &__group {
       @include clearfix();
       padding-left: 40px;
       padding-right: 40px;
-      .chat-contents__header__group-name{
+      &-name {
         float: left;
         margin-top: 35px;
         font-size: 20px;
         color: #333333;
 
       }
-      .chat-contents__header__group-edit-btn{
+      &-edit-btn {
         float: right;
         height: 40px;
         padding-left: 20px;
@@ -36,30 +36,30 @@
         cursor:pointer;
       }
     }
-    .chat-contents__header__group-member {
+    &__group-member {
     color: #999999;
     font-size: 12px;
     padding-left: 40px;
     }
   }
 
-  .chat-contents__body {
+  &__body {
     height: calc(100vh - 220px);
     overflow: scroll;
     .chat-contents__message {
       padding-top: 46px;
       padding-left: 40px;
-      .chat-contents__message-info {
+      &-info {
         @include clearfix();
 
-        .chat-contents__message-info__sender-name {
+        &__sender-name {
           font-size: 16px;
           color: $messageTextColor;
           font-weight: bold;
           float: left;
           line-height: 16px;
         }
-        .chat-contents__message-info__send-time {
+        &__send-time {
           font-size: 12px;
           color: #999999;
           float: left;
@@ -67,7 +67,7 @@
           margin-left: 10px;
         }
       }
-      .chat-contents__message__text {
+      &__text {
         font-size: 14px;
         color: $messageTextColor;
         margin-top: 10px;
@@ -75,15 +75,15 @@
     }
 
   }
-  .chat-contents__footer {
+  &__footer {
     background-color: #AAAAAA;
     height: 90px;
     width: 100%;
-    .chat-contents__footer__form {
+    &__form {
       margin: 0 40px;
       padding-left: 10px;
       position: relative;
-      .chat-contents__footer__form__body{
+      &__body{
         color: $messageTextColor;
         font-size: 16px;
         width: calc(100% - 80px);

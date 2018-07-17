@@ -6,19 +6,19 @@
   width: 300px;
   height: calc(100vh - 30px);
   overflow: scroll;
-  .chat-sidebar__user {
+  &__user {
     height: 100px;
     width: 100%;
     background-color: $sidebarUserBackgroundColor;
     position: relative;
-    .chat-sidebar__user-content {
+    &-content {
       width: 100%;
       height: 40px;
       line-height: 40px;
       margin: auto 0;
       top: 0;
-        bottom: 0;
-        position: absolute;
+      bottom: 0;
+      position: absolute;
       .chat-sidebar__user-name {
         color: $sidebarTextColor;
         width: 60%;
@@ -45,14 +45,14 @@
       }
     }
   }
-  .chat-sidebar__groups {
+  &__groups {
     height: 56px;
     color: $sidebarTextColor;
     padding: 20px;
-    .chat-sidebar__groups__name {
+    &__name {
       font-size: 15px;
     }
-    .chat-sidebar__groups__latest-message {
+    &__latest-message {
       font-size: 11px;
       margin-top: 5px;
     }

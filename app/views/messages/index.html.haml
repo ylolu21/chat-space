@@ -1,16 +1,16 @@
 .notification
   .notice チャットグループが作成されました
 
-.chat-sidevar
-  .chat-sidevar__user
-    .chat-sidevar__user
-      .chat-sidevar__user-content
-        .chat-sidevar__user-name テスト
-        = link_to '', class: "chat-sidevar__new-group" do
-          %i.fa.fa-pencil-square-o
-        = link_to '', class: "chat-sidevar__edit-user" do
-          %i.fa.fa-cog
-  = render partial: "chat-sidevar__groups"
+.chat-sidebar
+  .chat-sidebar__user
+    .chat-sidebar__user
+      .chat-sidebar__user-content
+        .chat-sidebar__user-name テスト
+        = link_to '#', class: "chat-sidebar__new-group" do
+          = fa_icon "pencil-square-o"
+        = link_to '#', class: "chat-sidebar__edit-user" do
+          = fa_icon "cog"
+  = render partial: "chat-sidebar__groups"
 
 .chat-contents
   .chat-contents__header

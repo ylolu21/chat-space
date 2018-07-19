@@ -1,6 +1,8 @@
 @import "./reset";
-@import "./variable";
+@import "config/colors.scss";
 @import "./clearfix";
 @import "./messages";
 @import "./chat-sidebar";
 @import "font-awesome";
+@import "user.scss";
+@import "modules/flash.scss";

@@ -1,3 +1,8 @@
 .chat-sidebar__groups
-  .chat-sidebar__groups__name グループ名
-  .chat-sidebar__groups__latest-message 最新メッセージ
+  - current_user.groups.each do |group|
+    .chat-sidebar__groups__group
+      = link_to group_messages_path(group) do
+        .chat-sidebar__groups__group-name
+          = group.name
+        .chat-sidebar__groups__group-latest-message
+          メッセージはまだありません

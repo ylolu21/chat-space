@@ -44,15 +44,20 @@
     }
   }
   &__groups {
-    height: 56px;
-    color: $sidebarTextColor;
-    padding: 20px;
-    &__name {
-      font-size: 15px;
-    }
-    &__latest-message {
-      font-size: 11px;
-      margin-top: 5px;
+    &__group {
+      height: 56px;
+      color: $sidebarTextColor;
+      padding: 20px;
+      a {
+        color: $sidebarTextColor;
+        .chat-sidebar__groups__group-name {
+          font-size: 15px;
+        }
+        .chat-sidebar__groups__group-latest-message {
+          font-size: 11px;
+          margin-top: 5px;
+        }
+      }
     }
   }
 }

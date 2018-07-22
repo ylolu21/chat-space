@@ -5,18 +5,23 @@
 .chat-contents
   .chat-contents__header
     .chat-contents__header__group
-      .chat-contents__header__group-name Sample
-      .chat-contents__header__group-edit-btn Edit
+      .chat-contents__header__group-name
+        = @group.name
+      = link_to "/groups/#{@group.id}/edit", class: "chat-contents__header__group-edit-btn" do
+        Edit
     .chat-contents__header__group-member
       Member : 
-      %i sample
+      - @group.users.each do |user|
+        %i= user.name
 
   .chat-contents__body
-    = render partial: "chat-contents__body"
+    = render partial: 'chat-contents__body', collection: @messages, as: "message"
   .chat-contents__footer
-    %form{class: "chat-contents__footer__form", action: "/", method: :post}
-      .chat-contents__footer__form__body
-        %input{placeholder: "type a message", class: "new-message", type: "text" }
-          %label.upload-label{for: "upload-icon" }
-            = fa_icon("image")
-      %input{type: "submit", value: "SEND", class: "new-message-send-btn" }
+    .form
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'

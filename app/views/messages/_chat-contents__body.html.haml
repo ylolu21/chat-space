@@ -1,47 +1,11 @@
 .chat-contents__message
   .chat-contents__message-info
-    .chat-contents__message-info__sender-name メンバー1
-    .chat-contents__message-info__send-time 2018/7/15 12:12:12
-  .chat-contents__message__text これはテストです
-
-.chat-contents__message
-  .chat-contents__message-info
-    .chat-contents__message-info__sender-name メンバー1
-    .chat-contents__message-info__send-time 2018/7/15 12:12:12
-  .chat-contents__message__text これはテストです
-
-.chat-contents__message
-  .chat-contents__message-info
-    .chat-contents__message-info__sender-name メンバー1
-    .chat-contents__message-info__send-time 2018/7/15 12:12:12
-  .chat-contents__message__text これはテストです
-
-.chat-contents__message
-  .chat-contents__message-info
-    .chat-contents__message-info__sender-name メンバー1
-    .chat-contents__message-info__send-time 2018/7/15 12:12:12
-  .chat-contents__message__text これはテストです
-
-.chat-contents__message
-  .chat-contents__message-info
-    .chat-contents__message-info__sender-name メンバー1
-    .chat-contents__message-info__send-time 2018/7/15 12:12:12
-  .chat-contents__message__text これはテストです
-
-.chat-contents__message
-  .chat-contents__message-info
-    .chat-contents__message-info__sender-name メンバー1
-    .chat-contents__message-info__send-time 2018/7/15 12:12:12
-  .chat-contents__message__text これはテストです
-
-.chat-contents__message
-  .chat-contents__message-info
-    .chat-contents__message-info__sender-name メンバー1
-    .chat-contents__message-info__send-time 2018/7/15 12:12:12
-  .chat-contents__message__text これはテストです
-
-.chat-contents__message
-  .chat-contents__message-info
-    .chat-contents__message-info__sender-name メンバー1
-    .chat-contents__message-info__send-time 2018/7/15 12:12:12
-  .chat-contents__message__text これはテストです
+    .chat-contents__message-info__sender-name
+      = message.user.name
+    .chat-contents__message-info__send-time
+      = l(message.created_at, format: :long)
+  .chat-contents__message__text
+    - if message.content.present?
+      %p.chat-contents__message__text-content
+        = message.content
+    = image_tag message.image.url, class: 'chat-contents__message__image' if message.image.present?

@@ -1,6 +1,5 @@
 $(function() {
   function buildHTML(message) {
-    console.log(message);
     var add_text_message = (message.body !== "") ? `<p class="chat-contents__message__text-content">${message.body}</p>` : ""
     var add_image = (message.image.url !== null) ? `<img class="chat-contents__message__image" src="${message.image.url}" alt="${message.image.url}">` : ""
     var html = `
@@ -36,7 +35,6 @@ $(function() {
     .done(function(data) {
       var html = buildHTML(data);
       var chat_body = ".chat-contents__body";
-      console.log(html);
       $(chat_body).append(html)
       $('#chat-body').animate({scrollTop: $('#chat-body')[0].scrollHeight}, 'fast');
       $('.form__message').val('')

@@ -1,7 +1,7 @@
 $(function() {
   function buildHTML(message) {
-    var add_text_message = (message.body !== "") ? `<p class="chat-contents__message__text-content">${message.body}</p>` : ""
-    var add_image = (message.image.url !== null) ? `<img class="chat-contents__message__image" src="${message.image.url}" alt="${message.image.url}">` : ""
+    var add_text_message = `<p class="chat-contents__message__text-content">${message.body}</p>`
+    var add_image = message.image_url !== null ? `<img class="chat-contents__message__image" src="${message.image.url}" alt="${message.image.url}">` : ""
     var html = `
           <div class="chat-contents__message">
             <div class="chat-contents__message-info">

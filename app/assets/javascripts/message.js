@@ -1,6 +1,5 @@
 $(function() {
   function buildHTML(message) {
-    var add_text_message = `<p class="chat-contents__message__text-content">${message.body}</p>`
     var add_image = message.image_url !== null ? `<img class="chat-contents__message__image" src="${message.image_url}" alt="${message.image_url}">` : ""
     var html = `
           <div class="chat-contents__message">
@@ -13,7 +12,7 @@ $(function() {
               </div>
             </div>
             <div class="chat-contents__message__text">
-              ${add_text_message}
+              <p class="chat-contents__message__text-content">${message.body}</p>
               ${add_image}
             </div>
           </div>`
@@ -41,6 +40,8 @@ $(function() {
       $('#new_message')[0].reset();
       $('.form__submit').attr('disabled', false);
       scroll();
+
+
     })
     .fail(function(){
       alert('error');

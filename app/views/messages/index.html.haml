@@ -14,7 +14,7 @@
       - @group.users.each do |user|
         %i= user.name
 
-  .chat-contents__body
+  #chat-body.chat-contents__body
     = render partial: 'chat-contents__body', collection: @messages, as: "message"
   .chat-contents__footer
     .form

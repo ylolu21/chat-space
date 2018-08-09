@@ -40,8 +40,6 @@ $(function() {
       $('#new_message')[0].reset();
       $('.form__submit').attr('disabled', false);
       scroll();
-
-
     })
     .fail(function(){
       alert('error');

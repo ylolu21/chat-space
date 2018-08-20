@@ -42,7 +42,6 @@ function appendAddUser(user_id, user_name) {
       data: { keyword: input ,group_users: search_users_ids},
       dataType: 'json'
     })
-
     .done(function(users) {
       search_list.empty();
       if (input != "") {
@@ -59,6 +58,7 @@ function appendAddUser(user_id, user_name) {
       alert('ユーザー検索に失敗しました');
     })
   });
+
   $('#user-search-result').on("click", '.chat-group-user__btn--add', function() {
     var add_user_id = Number($(this).attr("data-user-id"));
     var add_user_name = $(this).attr("data-user-name");
@@ -66,6 +66,7 @@ function appendAddUser(user_id, user_name) {
     $(this).parent().remove();
     search_users_ids.push(add_user_id)
   })
+
   $('#chat-group-users').on("click", '.chat-group-user__btn--remove', function() {
     var remove_user = $(this).parent().attr('id');
     var remove_user_id = $(this).parent().children('input').attr('value');

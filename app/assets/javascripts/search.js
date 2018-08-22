@@ -3,6 +3,7 @@ $(document).on('turbolinks:load', function() {
 var search_field = $("#user-search-field");
 var search_list = $("#user-search-result");
 var add_list = $("#chat-group-users");
+
 var group_users_ids = document.getElementsByName("group[user_ids][]");
 var search_users_ids = [];
 

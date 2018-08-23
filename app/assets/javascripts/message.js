@@ -49,33 +49,34 @@ $(document).on('turbolinks:load', function() {
   })
 
 
-  var interval = setInterval(updateMessage, 5000);
+  var interval = setInterval(updateMessage, 3000);
   function updateMessage() {
     if (window.location.href.match(/\/groups\/\d+\/messages/)) {
       var message_last_id = $('.chat-contents__message:last').data("message_id")
       if (message_last_id) {
-      $.ajax({
-        url: location.href,
-        type: 'GET',
-        dataType: 'json',
-        data: {
-          message: { id: message_last_id }
-        }
-      })
-      .done(function(data) {
-        var addHTML = '';
-        if (Object.keys(data).length != 0){
-          data.forEach(function(message) {
-            addHTML += buildHTML(message);
-          })
-        }
-        $('.chat-contents__body').append(addHTML);
-      })
-      .fail(function() {
-        alert('--error--');
-        clearInterval(interval);
-      })
-    }} else {
+        $.ajax({
+          url: location.href,
+          type: 'GET',
+          dataType: 'json',
+          data: {
+            message: { id: message_last_id }
+          }
+        })
+        .done(function(data) {
+          var addHTML = '';
+          if (data.length){
+            data.forEach(function(message) {
+              addHTML += buildHTML(message);
+            })
+          }
+          $('.chat-contents__body').append(addHTML);
+        })
+        .fail(function() {
+          alert('--error--');
+          clearInterval(interval);
+        })
+      }
+    } else {
       clearInterval(interval);
     }
   }

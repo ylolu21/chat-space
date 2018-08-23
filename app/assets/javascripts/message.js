@@ -49,11 +49,9 @@ $(document).on('turbolinks:load', function() {
   })
 
 
-  var interval = setInterval(update_message, 5000);
-  var i = 0;
-  function update_message() {
+  var interval = setInterval(updateMessage, 5000);
+  function updateMessage() {
     if (window.location.href.match(/\/groups\/\d+\/messages/)) {
-      i +=1;
       var message_last_id = $('.chat-contents__message:last').data("message_id")
       if (message_last_id) {
       $.ajax({

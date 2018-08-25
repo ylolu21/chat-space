@@ -3,7 +3,14 @@ $(document).on('turbolinks:load', function() {
 var search_field = $("#user-search-field");
 var search_list = $("#user-search-result");
 var add_list = $("#chat-group-users");
-var search_users_ids = [document.getElementsByName("group[user_ids][]")[0].value];
+
+var group_users_ids = document.getElementsByName("group[user_ids][]");
+var search_users_ids = [];
+
+group_users_ids.forEach(function(id) {
+  search_users_ids.push(id.value);
+});
+
 
 function appendUser(user) {
   var html = `<div class="chat-group-user clearfix">

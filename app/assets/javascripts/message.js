@@ -48,7 +48,6 @@ $(document).on('turbolinks:load', function() {
     })
   })
 
-
   var interval = setInterval(updateMessage, 5000);
   function updateMessage() {
     if (window.location.href.match(/\/groups\/\d+\/messages/)) {
@@ -79,6 +78,5 @@ $(document).on('turbolinks:load', function() {
       clearInterval(interval);
     }
   }
-
 
 });

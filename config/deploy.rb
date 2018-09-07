@@ -1,10 +1,10 @@
 # config valid for current version and patch releases of Capistrano
-lock '~> 3.11.0'
+lock '3.11.0'
 
 set :application, "chat-space"
-set :repo_url, "git@github.com:yolu21/chat-space.git"
+set :repo_url, 'git@github.com:ylolu21/chat-space.git'
 
-set linked_dirs, fetch(:linked_dirs, []),push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
+set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
 
 set :rbenv_type, :user
 set :rbenv_ruby, '2.3.1'

@@ -24,9 +24,6 @@
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyleAlignWith, AutoCorrect, Severity.
 # SupportedStylesAlignWith: start_of_line, def
-Layout/DefEndAlignment:
-  Exclude:
-    - 'app/controllers/messages_controller.rb'
 
 # Offense count: 15
 # Cop supports --auto-correct.

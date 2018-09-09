@@ -35,10 +35,6 @@
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle.
 # SupportedStyles: empty_lines, no_empty_lines
-Layout/EmptyLinesAroundBlockBody:
-  Exclude:
-    - 'spec/controllers/messages_controller_spec.rb'
-    - 'spec/models/message_spec.rb'
 
 # Offense count: 2
 # Cop supports --auto-correct.

@@ -50,8 +50,7 @@ describe MessagesController do
 
       context 'can seve' do
         subject {
-          post :create,
-          params: params
+          post :create, params: params
         }
 
         # メッセージの保存はできたのか
@@ -69,8 +68,7 @@ describe MessagesController do
         let(:invalid_params) { { group_id: group.id, user_id: user.id, message: attributes_for(:message, content: nil, image: nil) } }
 
         subject {
-          post :create,
-          params: invalid_params
+          post :create, params: invalid_params
         }
 
         # メッセージの保存は行われなかったか

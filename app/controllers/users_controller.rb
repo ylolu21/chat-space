@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-
   def index
     @users = User.where('name LIKE(?)', "%#{params[:keyword]}%").where.not(id: params[:group_users])
     respond_to do |format|

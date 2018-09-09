@@ -40,10 +40,6 @@
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle.
 # SupportedStyles: empty_lines, empty_lines_except_namespace, empty_lines_special, no_empty_lines, beginning_only, ending_only
-Layout/EmptyLinesAroundClassBody:
-  Exclude:
-    - 'app/controllers/users_controller.rb'
-    - 'app/models/group.rb'
 
 # Offense count: 1
 # Cop supports --auto-correct.

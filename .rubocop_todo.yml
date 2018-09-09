@@ -9,17 +9,11 @@
 # Offense count: 1
 # Configuration parameters: Include.
 # Include: **/*.gemfile, **/Gemfile, **/gems.rb
-Bundler/DuplicatedGem:
-  Exclude:
-    - 'Gemfile'
 
 # Offense count: 10
 # Cop supports --auto-correct.
 # Configuration parameters: Include, TreatCommentsAsGroupSeparators.
 # Include: **/*.gemfile, **/Gemfile, **/gems.rb
-Bundler/OrderedGems:
-  Exclude:
-    - 'Gemfile'
 
 # Offense count: 2
 # Cop supports --auto-correct.

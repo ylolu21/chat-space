@@ -71,7 +71,7 @@ describe MessagesController do
 
         # メッセージの保存は行われなかったか
         it "does not count up" do
-          expect{ subject }.not_to change(Message, :count)
+          expect { subject }.not_to change(Message, :count)
         end
 
         # 意図したビューが描画されているか

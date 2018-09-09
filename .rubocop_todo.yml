@@ -30,10 +30,6 @@
 
 # Offense count: 2
 # Cop supports --auto-correct.
-Layout/EmptyLinesAroundAccessModifier:
-  Exclude:
-    - 'app/controllers/groups_controller.rb'
-    - 'app/controllers/messages_controller.rb'
 
 # Offense count: 3
 # Cop supports --auto-correct.

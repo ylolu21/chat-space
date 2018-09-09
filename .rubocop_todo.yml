@@ -27,13 +27,6 @@
 
 # Offense count: 15
 # Cop supports --auto-correct.
-Layout/EmptyLines:
-  Exclude:
-    - 'Capfile'
-    - 'Gemfile'
-    - 'config/deploy.rb'
-    - 'config/deploy/production.rb'
-    - 'config/deploy/staging.rb'
 
 # Offense count: 2
 # Cop supports --auto-correct.

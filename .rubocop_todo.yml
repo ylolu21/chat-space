@@ -82,39 +82,19 @@
 # Offense count: 2
 # Cop supports --auto-correct.
 # Configuration parameters: IndentationWidth.
-Layout/Tab:
-  Exclude:
-    - 'app/controllers/messages_controller.rb'
 
 # Offense count: 8
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle.
 # SupportedStyles: final_newline, final_blank_line
-Layout/TrailingBlankLines:
-  Exclude:
-    - 'Capfile'
-    - 'config/application.rb'
-    - 'config/deploy/production.rb'
-    - 'config/unicorn.rb'
-    - 'spec/factories/groups.rb'
-    - 'spec/factories/messages.rb'
-    - 'spec/factories/users.rb'
-    - 'spec/models/message_spec.rb'
 
 # Offense count: 2
 # Cop supports --auto-correct.
 # Configuration parameters: AllowInHeredoc.
-Layout/TrailingWhitespace:
-  Exclude:
-    - 'config/initializers/devise.rb'
-    - 'spec/rails_helper.rb'
 
 # Offense count: 1
 # Cop supports --auto-correct.
 # Configuration parameters: IgnoreEmptyBlocks, AllowUnusedKeywordArguments.
-Lint/UnusedBlockArgument:
-  Exclude:
-    - 'config/deploy.rb'
 
 # Offense count: 5
 # Configuration parameters: CountComments, ExcludedMethods.
@@ -202,18 +182,11 @@ Style/IfUnlessModifier:
 # Offense count: 3
 # Cop supports --auto-correct.
 # Configuration parameters: PreferredDelimiters.
-Style/PercentLiteralDelimiters:
-  Exclude:
-    - 'config/deploy.rb'
-    - 'config/deploy/production.rb'
-    - 'config/spring.rb'
 
 # Offense count: 5
 # Cop supports --auto-correct.
 # Configuration parameters: MinSize.
 # SupportedStyles: percent, brackets
-Style/SymbolArray:
-  EnforcedStyle: brackets
 
 # Offense count: 73
 # Configuration parameters: AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, IgnoredPatterns.

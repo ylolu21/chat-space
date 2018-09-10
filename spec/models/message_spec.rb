@@ -39,6 +39,5 @@ RSpec.describe Message, type: :model do
         expect(message.errors[:user]).to include("を入力してください")
       end
     end
-
   end
 end

@@ -5,7 +5,7 @@ set :application, "chat-space"
 set :repo_url, 'git@github.com:ylolu21/chat-space.git'
 
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
-set :linked_files, %w{ config/secrets.yml }
+set :linked_files, %w[config/secrets.yml]
 
 set :rbenv_type, :user
 set :rbenv_ruby, '2.3.1'
@@ -32,17 +32,14 @@ namespace :deploy do
 
   desc 'upload secrets.yml'
   task :upload do
-    on roles(:app) do |host|
-      if test "[ ! -d #{shared_path}/config ]"
-        execute "mkdir -p #{shared_path}/config"
-      end
+    on roles(:app) do
+      execute "mkdir -p #{shared_path}/config" if test "[ ! -d #{shared_path}/config ]"
       upload!('config/secrets.yml', "#{shared_path}/config/secrets.yml")
     end
   end
   before :starting, 'deploy:upload'
   after :finishing, 'deploy:cleanup'
 end
-
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp

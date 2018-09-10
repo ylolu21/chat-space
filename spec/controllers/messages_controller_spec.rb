@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 describe MessagesController do
-
   let(:group) { create(:group) }
   let(:user) { create(:user) }
 
@@ -29,7 +28,7 @@ describe MessagesController do
 
     context 'not log in' do
       before do
-        get :index, params: { group_id: group.id}
+        get :index, params: { group_id: group.id }
       end
 
       # 意図したビューにリダイレクトできているか
@@ -40,7 +39,6 @@ describe MessagesController do
   end
 
   describe '#create' do
-
     let(:params) { { group_id: group.id, user_id: user.id, message: attributes_for(:message) } }
 
     context 'log in' do
@@ -49,10 +47,7 @@ describe MessagesController do
       end
 
       context 'can seve' do
-        subject {
-          post :create,
-          params: params
-        }
+        subject { post :create, params: params }
 
         # メッセージの保存はできたのか
         it "count up message" do
@@ -68,14 +63,11 @@ describe MessagesController do
       context 'can not save' do
         let(:invalid_params) { { group_id: group.id, user_id: user.id, message: attributes_for(:message, content: nil, image: nil) } }
 
-        subject {
-          post :create,
-          params: invalid_params
-        }
+        subject { post :create, params: invalid_params }
 
         # メッセージの保存は行われなかったか
         it "does not count up" do
-          expect{ subject }.not_to change(Message, :count)
+          expect { subject }.not_to change(Message, :count)
         end
 
         # 意図したビューが描画されているか

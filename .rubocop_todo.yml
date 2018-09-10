@@ -78,9 +78,6 @@
 
 # Offense count: 2
 # Cop supports --auto-correct.
-Layout/SpaceInsidePercentLiteralDelimiters:
-  Exclude:
-    - 'config/deploy.rb'
 
 # Offense count: 2
 # Cop supports --auto-correct.

@@ -47,9 +47,7 @@ describe MessagesController do
       end
 
       context 'can seve' do
-        subject {
-          post :create, params: params
-        }
+        subject { post :create, params: params }
 
         # メッセージの保存はできたのか
         it "count up message" do
@@ -65,9 +63,7 @@ describe MessagesController do
       context 'can not save' do
         let(:invalid_params) { { group_id: group.id, user_id: user.id, message: attributes_for(:message, content: nil, image: nil) } }
 
-        subject {
-          post :create, params: invalid_params
-        }
+        subject { post :create, params: invalid_params }
 
         # メッセージの保存は行われなかったか
         it "does not count up" do

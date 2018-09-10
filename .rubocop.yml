@@ -36,3 +36,7 @@ Style/AsciiComments:
 MethodLength:
   CountComments: true  # count full line comments?
   Max: 11
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'

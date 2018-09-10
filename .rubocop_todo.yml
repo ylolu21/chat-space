@@ -10,16 +10,15 @@
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle.
 # SupportedStyles: braces, no_braces, context_dependent
-Style/BracesAroundHashParameters:
-  Exclude:
-    - 'app/controllers/groups_controller.rb'
-    - 'config/deploy.rb'
+# Style/BracesAroundHashParameters:
+#   Exclude:
+#     - 'app/controllers/groups_controller.rb'
+#     - 'config/deploy.rb'
 
 # Offense count: 3
 # Cop supports --auto-correct.
-Style/ExpandPathArguments:
-  Exclude:
-    - 'config/unicorn.rb'
-    - 'spec/rails_helper.rb'
-    - 'test/test_helper.rb'
-
+# Style/ExpandPathArguments:
+#   Exclude:
+#     - 'config/unicorn.rb'
+#     - 'spec/rails_helper.rb'
+#     - 'test/test_helper.rb'

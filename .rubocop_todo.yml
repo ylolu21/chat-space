@@ -10,10 +10,10 @@
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle.
 # SupportedStyles: braces, no_braces, context_dependent
-# Style/BracesAroundHashParameters:
-#   Exclude:
-#     - 'app/controllers/groups_controller.rb'
-#     - 'config/deploy.rb'
+Style/BracesAroundHashParameters:
+  Exclude:
+    - 'app/controllers/groups_controller.rb'
+    - 'config/deploy.rb'
 
 # Offense count: 3
 # Cop supports --auto-correct.
@@ -23,8 +23,3 @@ Style/ExpandPathArguments:
     - 'spec/rails_helper.rb'
     - 'test/test_helper.rb'
 
-# Offense count: 73
-# Configuration parameters: AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, IgnoredPatterns.
-# URISchemes: http, https
-Metrics/LineLength:
-  Max: 154

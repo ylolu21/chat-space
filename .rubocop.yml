@@ -29,3 +29,10 @@ Metrics/LineLength:
 #'frozen_string_literal: true'を無効
 Style/FrozenStringLiteralComment:
   Enabled: false
+
+Style/AsciiComments:
+  Enabled: false
+
+MethodLength:
+  CountComments: true  # count full line comments?
+  Max: 11

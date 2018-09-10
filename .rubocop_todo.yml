@@ -6,96 +6,6 @@
 # Note that changes in the inspected code, or installation of new
 # versions of RuboCop, may require this file to be generated again.
 
-# Offense count: 1
-# Configuration parameters: Include.
-# Include: **/*.gemfile, **/Gemfile, **/gems.rb
-
-# Offense count: 10
-# Cop supports --auto-correct.
-# Configuration parameters: Include, TreatCommentsAsGroupSeparators.
-# Include: **/*.gemfile, **/Gemfile, **/gems.rb
-
-# Offense count: 2
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, IndentationWidth.
-# SupportedStyles: with_first_parameter, with_fixed_indentation
-
-# Offense count: 1
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyleAlignWith, AutoCorrect, Severity.
-# SupportedStylesAlignWith: start_of_line, def
-
-# Offense count: 15
-# Cop supports --auto-correct.
-
-# Offense count: 2
-# Cop supports --auto-correct.
-
-# Offense count: 3
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: empty_lines, no_empty_lines
-
-# Offense count: 2
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: empty_lines, empty_lines_except_namespace, empty_lines_special, no_empty_lines, beginning_only, ending_only
-
-# Offense count: 1
-# Cop supports --auto-correct.
-# Configuration parameters: AllowForAlignment, ForceEqualSignAlignment.
-
-# Offense count: 4
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: normal, rails
-
-# Offense count: 1
-# Cop supports --auto-correct.
-# Configuration parameters: Width, IgnoredPatterns.
-
-# Offense count: 1
-# Cop supports --auto-correct.
-# Configuration parameters: AllowForAlignment.
-
-# Offense count: 1
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, EnforcedStyleForEmptyBraces.
-# SupportedStyles: space, no_space
-# SupportedStylesForEmptyBraces: space, no_space
-
-# Offense count: 2
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, EnforcedStyleForEmptyBrackets.
-# SupportedStyles: space, no_space, compact
-# SupportedStylesForEmptyBrackets: space, no_space
-
-# Offense count: 2
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, EnforcedStyleForEmptyBraces.
-# SupportedStyles: space, no_space, compact
-# SupportedStylesForEmptyBraces: space, no_space
-
-# Offense count: 2
-# Cop supports --auto-correct.
-
-# Offense count: 2
-# Cop supports --auto-correct.
-# Configuration parameters: IndentationWidth.
-
-# Offense count: 8
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: final_newline, final_blank_line
-
-# Offense count: 2
-# Cop supports --auto-correct.
-# Configuration parameters: AllowInHeredoc.
-
-# Offense count: 1
-# Cop supports --auto-correct.
-# Configuration parameters: IgnoreEmptyBlocks, AllowUnusedKeywordArguments.
-
 # Offense count: 5
 # Configuration parameters: CountComments, ExcludedMethods.
 # ExcludedMethods: refine
@@ -104,8 +14,8 @@ Metrics/BlockLength:
 
 # Offense count: 1
 # Configuration parameters: CountComments.
-Metrics/MethodLength:
-  Max: 11
+# Metrics/MethodLength:
+#   Max: 11
 
 # Offense count: 14
 # Configuration parameters: AllowedChars.
@@ -152,10 +62,6 @@ Style/ClassAndModuleChildren:
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle.
 # SupportedStyles: compact, expanded
-Style/EmptyMethod:
-  Exclude:
-    - 'app/controllers/groups_controller.rb'
-    - 'app/controllers/users_controller.rb'
 
 # Offense count: 3
 # Cop supports --auto-correct.
@@ -164,29 +70,6 @@ Style/ExpandPathArguments:
     - 'config/unicorn.rb'
     - 'spec/rails_helper.rb'
     - 'test/test_helper.rb'
-
-# Offense count: 1
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, UseHashRocketsWithSymbolValues, PreferHashRocketsForNonAlnumEndingSymbols.
-# SupportedStyles: ruby19, hash_rockets, no_mixed_keys, ruby19_no_mixed_keys
-Style/HashSyntax:
-  Exclude:
-    - 'app/controllers/groups_controller.rb'
-
-# Offense count: 1
-# Cop supports --auto-correct.
-Style/IfUnlessModifier:
-  Exclude:
-    - 'config/deploy.rb'
-
-# Offense count: 3
-# Cop supports --auto-correct.
-# Configuration parameters: PreferredDelimiters.
-
-# Offense count: 5
-# Cop supports --auto-correct.
-# Configuration parameters: MinSize.
-# SupportedStyles: percent, brackets
 
 # Offense count: 73
 # Configuration parameters: AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, IgnoredPatterns.

@@ -28,7 +28,7 @@ describe MessagesController do
 
     context 'not log in' do
       before do
-        get :index, params: { group_id: group.id}
+        get :index, params: { group_id: group.id }
       end
 
       # 意図したビューにリダイレクトできているか

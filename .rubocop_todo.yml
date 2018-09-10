@@ -75,10 +75,6 @@
 # Configuration parameters: EnforcedStyle, EnforcedStyleForEmptyBraces.
 # SupportedStyles: space, no_space, compact
 # SupportedStylesForEmptyBraces: space, no_space
-Layout/SpaceInsideHashLiteralBraces:
-  Exclude:
-    - 'app/controllers/groups_controller.rb'
-    - 'spec/controllers/messages_controller_spec.rb'
 
 # Offense count: 2
 # Cop supports --auto-correct.
